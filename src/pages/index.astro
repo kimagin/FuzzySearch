@@ -1,0 +1,31 @@
+---
+import Card from '../components/Card.astro'
+import Header from '../components/Header.astro'
+import SearchBar from '../components/SearchBar.astro'
+import MainLayout from '../layouts/MainLayout.astro'
+
+const request = await fetch('https://official-joke-api.appspot.com/jokes/ten')
+const jokes = await request.json()
+---
+
+<MainLayout title="Fuzzy Search">
+  <!-- Fuzzy Search -->
+
+  <Header />
+  <main class="flex flex-col overflow-y-scroll">
+    <section
+      id="results"
+      class="px-8 py-8 flex flex-col h-full gap-8">
+      {
+        jokes.map((joke) => (
+          <Card
+            joke={joke.setup}
+            type={joke.type}
+            pun={joke.punchline}
+          />
+        ))
+      }
+    </section>
+  </main>
+  <SearchBar />
+</MainLayout>
