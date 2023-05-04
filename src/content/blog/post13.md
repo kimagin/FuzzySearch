@@ -1,9 +1,10 @@
 ---
 category: '3D Arts'
+type: 'tutorial'
 name: 'article-13'
 slug: 'codeing-in-public'
-title: "The Essential Music Production Tools You Need to Know"
-pubDate: 'Sat, 03 Dec 2022 17:00'
+title: 'The Essential Music Production Tools You Need to Know'
+pubDate: 'Sat, 03 Dec 2022'
 shortDescription: 'Learn about the essential tools every music producer needs to have, from software to hardware.'
 description: 'Coding in public has become more common in recent years with the rise of social coding platforms like GitHub and the increasing popularity of open source software development. However, coding in public can present a unique set of challenges for developers who are used to working in private settings. In this article, we will explore the top 10 new challenges that developers may face when coding in public, such as managing feedback from the community, dealing with public scrutiny and criticism, maintaining professionalism and integrity, and balancing productivity with engagement in public forums. This article aims to provide helpful tips and strategies for developers who want to code in public effectively while still maintaining their sanity and productivity.'
 author: 'Iman Kimiaei'
@@ -11,17 +12,16 @@ image:
   url: './images/blog/post13.webp'
   alt: 'art image'
 size: [1744, 1160]
-tags: ['programminglanguages', 'backenddevelopment', 'cybersecurityawareness', 'webapplication', 'developercommunity']
+tags: ['CG and Computer arts', 'Vue', 'Framer', 'React']
+
 # --- Options ---
-editor: true
+editor: false
 selected: false
-discussion: false
-topRated: false
+discussion: true
+toprated: false
 ---
 
-
 ![[post13.webp]]
-
 
 # My First Blog Post
 

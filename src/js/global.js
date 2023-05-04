@@ -13,10 +13,10 @@ document.addEventListener('alpine:init', () => {
       const options = {
         includeMatches: true,
         minMatchCharLength: 3,
-        threshold: 0.6,
+        threshold: 0.5,
         keys: [
           'data.title',
-          'data.description',
+          'data.shortDescription',
           'data.category',
           'data.author',
         ],
@@ -29,8 +29,6 @@ document.addEventListener('alpine:init', () => {
         this.filteredPosts = fuse.search(this.query)
       })
     },
-    posts: [],
-    cards: [],
     query: '',
     filteredPosts: [],
   }))

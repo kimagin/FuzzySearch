@@ -1,9 +1,10 @@
 ---
 category: '3D Arts'
+type: 'tutorial'
 name: 'article-19'
 slug: 'codeing-in-public'
-title: "The Future of Music Production: Trends to Watch Out For"
-pubDate: 'Fri, 02 Jun 2023 13:15'
+title: 'The Future of Music Production: Trends to Watch Out For'
+pubDate: 'Fri, 02 Jun 2023'
 shortDescription: 'Discover the latest trends and innovations shaping the future of music production.'
 description: 'Coding in public has become more common in recent years with the rise of social coding platforms like GitHub and the increasing popularity of open source software development. However, coding in public can present a unique set of challenges for developers who are used to working in private settings. In this article, we will explore the top 10 new challenges that developers may face when coding in public, such as managing feedback from the community, dealing with public scrutiny and criticism, maintaining professionalism and integrity, and balancing productivity with engagement in public forums. This article aims to provide helpful tips and strategies for developers who want to code in public effectively while still maintaining their sanity and productivity.'
 author: 'Iman Kimiaei'
@@ -11,17 +12,16 @@ image:
   url: './images/blog/post19.webp'
   alt: 'art image'
 size: [1744, 1160]
-tags: ['digitalillustration', 'websecurity', 'technologicalinnovation', 'techsupport', 'videoproduction']
+tags: ['CG and Computer arts', 'Blender', 'Framer', 'StudioOne']
+
 # --- Options ---
-editor: true
+editor: false
 selected: false
 discussion: false
-topRated: false
+toprated: true
 ---
 
-
 ![[post19.webp]]
-
 
 # My First Blog Post
 

@@ -2,8 +2,8 @@ import { z, defineCollection } from 'astro:content'
 
 const blog = defineCollection({
   schema: z.object({
-    category: z.enum(['Web Dev', '3D Arts', 'Music Production']).optional(),
-    type: z.enum(['tutorial', 'video', 'article']).optional(),
+    category: z.enum(['Web Dev', '3D Arts', 'Music Production']),
+    type: z.enum(['tutorial', 'video', 'article']),
     name: z.string(),
     title: z
       .string()

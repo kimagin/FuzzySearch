@@ -1,9 +1,10 @@
 ---
 category: '3D Arts'
+type: 'tutorial'
 name: 'article-12'
 slug: 'codeing-in-public'
-title: "From Inspiration to Masterpiece: The Art of Music Production"
-pubDate: 'Sun, 20 Nov 2022 14:30'
+title: 'From Inspiration to Masterpiece: The Art of Music Production'
+pubDate: 'Sun, 20 Nov 2022'
 shortDescription: 'Explore the creative process of music production, from finding inspiration to crafting a masterpiece.'
 description: 'Coding in public has become more common in recent years with the rise of social coding platforms like GitHub and the increasing popularity of open source software development. However, coding in public can present a unique set of challenges for developers who are used to working in private settings. In this article, we will explore the top 10 new challenges that developers may face when coding in public, such as managing feedback from the community, dealing with public scrutiny and criticism, maintaining professionalism and integrity, and balancing productivity with engagement in public forums. This article aims to provide helpful tips and strategies for developers who want to code in public effectively while still maintaining their sanity and productivity.'
 author: 'Iman Kimiaei'
@@ -11,17 +12,16 @@ image:
   url: './images/blog/post12.webp'
   alt: 'art image'
 size: [1744, 1160]
-tags: ['UXdesign', 'ARtechnology', 'devtoolsfordays', 'techblog', 'softwareengineering']
+tags: ['Music Porduction', 'Tailwind', 'Framer', 'Javascript', 'Vscode']
+
 # --- Options ---
-editor: true
+editor: false
 selected: false
 discussion: false
-topRated: false
+toprated: false
 ---
 
-
 ![[post12.webp]]
-
 
 # My First Blog Post
 

@@ -1,27 +1,27 @@
 ---
 category: 'Web Dev'
+type: 'tutorial'
 name: 'article-03'
 slug: 'codeing-in-public'
-title: "5 Must-Know Web Development Tools for a Seamless Workflow"
-pubDate: 'Thu, 10 Feb 2022 14:15'
-shortDescription: "Learn how to build responsive websites that look great on any device with these tips and tricks for web developers."
+title: '5 Must-Know Web Development Tools for a Seamless Workflow'
+pubDate: 'Thu, 10 Feb 2022'
+shortDescription: 'Learn how to build responsive websites that look great on any device with these tips and tricks for web developers.'
 description: 'Coding in public has become more common in recent years with the rise of social coding platforms like GitHub and the increasing popularity of open source software development. However, coding in public can present a unique set of challenges for developers who are used to working in private settings. In this article, we will explore the top 10 new challenges that developers may face when coding in public, such as managing feedback from the community, dealing with public scrutiny and criticism, maintaining professionalism and integrity, and balancing productivity with engagement in public forums. This article aims to provide helpful tips and strategies for developers who want to code in public effectively while still maintaining their sanity and productivity.'
-author: 'Iman Kimiaei'
+author: 'Meredith Piaff'
 image:
   url: './images/blog/post3.webp'
   alt: 'art image'
 size: [1744, 1160]
-tags: ['3Dart', 'webdesign', 'programmerlife', 'technews', 'codingcommunity']
+tags: ['Music Porduction', 'Tailwind', 'Vue', 'Preact']
+
 # --- Options ---
-editor: true
-selected: false
-discussion: false
-topRated: false
+editor: false
+selected: true
+discussion: true
+toprated: false
 ---
 
 ![[post3.webp]]
-
-
 
 # My First Blog Post
 

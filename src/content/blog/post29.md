@@ -1,9 +1,10 @@
 ---
 category: 'Music Production'
+type: 'tutorial'
 name: 'article-29'
 slug: 'codeing-in-public'
-title: "The Marvels of 3D Printing: Bringing Art to Life"
-pubDate: 'Sat, 02 Dec 2023 13:30'
+title: 'The Marvels of 3D Printing: Bringing Art to Life'
+pubDate: 'Sat, 02 Dec 2023'
 shortDescription: 'Bring your imagination to life with 3D character design and explore the art of animation.'
 description: 'Coding in public has become more common in recent years with the rise of social coding platforms like GitHub and the increasing popularity of open source software development. However, coding in public can present a unique set of challenges for developers who are used to working in private settings. In this article, we will explore the top 10 new challenges that developers may face when coding in public, such as managing feedback from the community, dealing with public scrutiny and criticism, maintaining professionalism and integrity, and balancing productivity with engagement in public forums. This article aims to provide helpful tips and strategies for developers who want to code in public effectively while still maintaining their sanity and productivity.'
 author: 'Iman Kimiaei'
@@ -11,17 +12,16 @@ image:
   url: './images/blog/post29.webp'
   alt: 'art image'
 size: [1744, 1160]
-tags: ['3Drendering', 'ARexperience', 'hackerspaces', 'webaudio', 'computervision']
+tags: ['Vscode', 'Framer', 'Vue', 'Astro', 'Blender']
+
 # --- Options ---
-editor: true
+editor: false
 selected: false
 discussion: false
-topRated: false
+toprated: true
 ---
 
-
 ![[post29.webp]]
-
 
 # My First Blog Post
 
