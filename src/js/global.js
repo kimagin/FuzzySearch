@@ -1,6 +1,6 @@
 import Fuse from 'fuse.js'
 
-// Create a global database for Alpine
+// Create a global data object for Alpine
 document.addEventListener('alpine:init', () => {
   Alpine.data('data', () => ({
     async init() {
