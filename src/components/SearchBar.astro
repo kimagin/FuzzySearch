@@ -1,15 +1,61 @@
-<div class="border">
+---
+import Link from './Link.astro'
+---
+
+<div
+  class="border groupsearch"
+  x-data="data"
+  x-on:click.outside="showResults = false">
   <!-- Prevent the default submit behaviour -->
+  <div
+    id="results"
+    class="bg-emerald-50/50 px-8 py-4"
+    x-show="showResults"
+    x-transition.opacity
+    x-cloak>
+    <article class="border w-fit border-emerald-800 pb-4 rounded-md">
+      <a href="">
+        <img
+          width="170px"
+          src="./images/post3.webp"
+          alt=""
+        />
+        <div class="px-2 w-[170px]">
+          <h1 class="font-bold text-lg">Post</h1>
+          <p class="mt-2">
+            Link a two way connection between the global query variable and the
+            input box
+          </p>
+          <small class="">Iman Kimiaei</small>
+        </div>
+      </a>
+    </article>
+  </div>
   <form
     action="submit"
     @submit.prevent>
     <!-- Link a two way connection between the global query variable and the input box -->
     <input
       x-model.debounce="query"
-      class="border-t-2 focus:outline-none px-8 focus-within:bg-emerald-50/90 focus-within:py-6 w-full text-2xl p-4 transition-all"
+      x-on:focus="showResults = true"
+      class="border-t-2 focus:outline-none px-8 group-focus-within:bg-emerald-50/90 focus-within:py-6 w-full text-2xl p-4 transition-all"
       placeholder="what are you searching for?"
       autocomplete="none"
       type="text"
     />
   </form>
+  <style is:global>
+    [x-cloak] {
+      display: none !important;
+    }
+  </style>
+  <script is:inline>
+    function data() {
+      return {
+        init() {},
+        query: '',
+        showResults: false,
+      }
+    }
+  </script>
 </div>

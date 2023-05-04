@@ -23,23 +23,9 @@ function sendPosts(collection) {
     <!-- The section that will show the links to the pages -->
     <section
       id="results"
-      data-posts={sendPosts(blogPosts)}
       class="px-8 py-8 flex flex-col h-full gap-8">
-      <!-- Looping through the filtered posts and only show the links that match the query -->
-      <template x-for="post in filteredPosts">
-        <a
-          :href="post.item.data.name"
-          class="px-8 py-8 border-2 border-neutral-400 rounded-xl max-w-xl mx-auto">
-          <small x-text="post.item.data.name"> </small>
-          <h1
-            class="text-xl font-semibold"
-            x-text="post.item.data.title">
-          </h1>
-          <p x-text="post.item.data.shortDescription"></p>
-        </a>
-      </template>
     </section>
+    <!-- SearchBar component -->
+    <SearchBar />
   </main>
 </MainLayout>
-<!-- SearchBar component -->
-<SearchBar />

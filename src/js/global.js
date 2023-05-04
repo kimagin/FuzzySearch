@@ -1,5 +1,3 @@
-import Fuse from 'fuse.js'
-
 // Create a global data object for Alpine
 document.addEventListener('alpine:init', () => {
   Alpine.data('data', () => ({
@@ -10,35 +8,35 @@ document.addEventListener('alpine:init', () => {
       )
 
       // Fuse will use the following options
-      const options = {
-        includeMatches: true,
-        minMatchCharLength: 1,
-        threshold: 0.5,
-        keys: [
-          'data.title',
-          'data.shortDescription',
-          'data.category',
-          'data.author',
-        ],
-      }
+      // const options = {
+      //   includeMatches: true,
+      //   minMatchCharLength: 1,
+      //   threshold: 0.5,
+      //   keys: [
+      //     'data.title',
+      //     'data.shortDescription',
+      //     'data.category',
+      //     'data.author',
+      //   ],
+      // }
       // Create a new Fuzzy Search instance from all the posts
-      const fuse = new Fuse(allPosts, options)
-      const unfilteredPosts = allPosts.map((post) => {
-        return {
-          item: post,
-        }
-      })
+      // const fuse = new Fuse(allPosts, options)
+      // const unfilteredPosts = allPosts.map((post) => {
+      //   return {
+      //     item: post,
+      //   }
+      // })
 
-      this.filteredPosts = unfilteredPosts
+      // this.filteredPosts = unfilteredPosts
       // Any time that the query is changed, filteredPosts will get updated
-      this.$watch('query', (value) => {
-        if (value === '') {
-          console.log('empty')
-          this.filteredPosts = unfilteredPosts
-        } else {
-          this.filteredPosts = fuse.search(this.query)
-        }
-      })
+      // this.$watch('query', (value) => {
+      //   if (value === '') {
+      //     console.log('empty')
+      //     // this.filteredPosts = unfilteredPosts
+      //   } else {
+      //     // this.filteredPosts = fuse.search(this.query)
+      //   }
+      // })
     },
     query: '',
     filteredPosts: [],
