@@ -26,19 +26,7 @@ function sendPosts(collection) {
       id="results"
       class="px-8 py-8 flex flex-col h-full gap-8">
       <!-- Looping through the filtered posts and only show the links that match the query -->
-      <div id="results">
-        <template x-for="link in filteredPosts">
-          <a
-            :href="link.data.url"
-            class="flex flex-col gap-4 border-2 rounded-lg p-6">
-            <h1
-              class="font-bold text-2xl"
-              x-text="link.data.meta.title">
-            </h1>
-            <p x-text="link.data.excerpt"></p>
-          </a>
-        </template>
-      </div>
+      <div id="results"></div>
     </section>
   </main>
   <!-- SearchBar component -->

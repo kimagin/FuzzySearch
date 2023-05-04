@@ -2,7 +2,6 @@
 export interface Porps {
   title: string
 }
-
 const { title = 'Default Page' } = Astro.props
 ---
 
@@ -29,3 +28,9 @@ const { title = 'Default Page' } = Astro.props
   </body>
 </html>
 <!-- <script src="../js/global.js"></script> -->
+
+<style is:global>
+  mark {
+    @apply bg-emerald-100 rounded-md pb-0.5 px-1.5 border border-emerald-300 inline-flex w-fit;
+  }
+</style>

@@ -28,11 +28,23 @@
             if (e.target.dataset.loaded !== 'true') {
               e.target.dataset.loaded = 'true'
               // load the pagefind script
-              window.pagefind = await import('/pagefind/pagefind.js')
+              window.pagefind = await import('../../dist/pagefind/pagefind.js')
+              // window.pagefind = await import('/pagefind/pagefind.js')
             }
 
             // search the index using the input value
-            const search = await window.pagefind.search(this.query)
+            const search = await window.pagefind.search(this.query, {
+              filters: {},
+            })
+            const oneResult = await search.results[0].data()
+            // console.log(oneResult)
+            const filters = await pagefind.filters()
+            console.log(filters)
+
+            const fiveResults = await Promise.all(
+              search.results.slice(0, 5).map((r) => r.data())
+            )
+            console.log(fiveResults)
 
             // clear the old results
             document.querySelector('#results').innerHTML = ''
