@@ -1,11 +1,18 @@
 ---
-import Card from '../components/Card.astro'
 import Header from '../components/Header.astro'
 import SearchBar from '../components/SearchBar.astro'
 import MainLayout from '../layouts/MainLayout.astro'
+import { getCollection } from 'astro:content'
 
-const request = await fetch('https://official-joke-api.appspot.com/jokes/ten')
-const jokes = await request.json()
+// Fetch all the blog posts
+const blogPosts = await getCollection('blog', ({ data }) => {
+  return data
+})
+
+// Pass the fetched data to the data attribute of the section that will show the links
+function sendPosts(collection) {
+  return JSON.stringify(collection)
+}
 ---
 
 <MainLayout title="Fuzzy Search">
@@ -13,19 +20,26 @@ const jokes = await request.json()
 
   <Header />
   <main class="flex flex-col overflow-y-scroll">
+    <!-- The section that will show the links to the pages -->
     <section
       id="results"
+      data-posts={sendPosts(blogPosts)}
       class="px-8 py-8 flex flex-col h-full gap-8">
-      {
-        jokes.map((joke) => (
-          <Card
-            joke={joke.setup}
-            type={joke.type}
-            pun={joke.punchline}
-          />
-        ))
-      }
+      <!-- Looping through the filtered posts and only show the links that match the query -->
+      <template x-for="post in filteredPosts">
+        <a
+          :href="post.item.data.name"
+          class="px-8 py-8 border rounded-xl shadow-xl">
+          <small x-text="post.item.data.name"> </small>
+          <h1
+            class="text-xl font-semibold"
+            x-text="post.item.data.title">
+          </h1>
+          <p x-text="post.item.data.shortDescription"></p>
+        </a>
+      </template>
     </section>
   </main>
-  <SearchBar />
 </MainLayout>
+<!-- SearchBar component -->
+<SearchBar />
