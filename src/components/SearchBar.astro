@@ -1,4 +1,6 @@
-<div class="border">
+<div
+  class="border"
+  x-data="data">
   <!-- Prevent the default submit behaviour -->
   <form
     action="submit"
@@ -6,6 +8,7 @@
     <!-- Link a two way connection between the global query variable and the input box -->
     <input
       x-model.debounce="query"
+      id="search"
       class="border-t-2 focus:outline-none px-8 focus-within:bg-emerald-50/90 focus-within:py-6 w-full text-2xl p-4 transition-all"
       placeholder="what are you searching for?"
       autocomplete="none"
@@ -13,3 +16,39 @@
     />
   </form>
 </div>
+
+<script is:inline>
+  document.addEventListener('alpine:init', () => {
+    Alpine.data('data', () => ({
+      async init() {
+        document
+          .querySelector('#search')
+          ?.addEventListener('input', async (e) => {
+            // only load the pagefind script once
+            if (e.target.dataset.loaded !== 'true') {
+              e.target.dataset.loaded = 'true'
+              // load the pagefind script
+              window.pagefind = await import('/pagefind/pagefind.js')
+            }
+
+            // search the index using the input value
+            const search = await window.pagefind.search(this.query)
+
+            // clear the old results
+            document.querySelector('#results').innerHTML = ''
+
+            for (const result of search.results) {
+              const data = await result.data()
+              document.querySelector('#results').innerHTML += `
+              <a href="${data.url}" class="flex flex-col gap-4 border-2 rounded-lg p-6">
+                <h3 class="font-bold text-2xl">${data.meta.title}</h3>
+                <p>${data.excerpt}</p>
+              </a>`
+            }
+          })
+      },
+      query: '',
+      filteredPosts: [],
+    }))
+  })
+</script>
