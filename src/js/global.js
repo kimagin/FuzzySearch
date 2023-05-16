@@ -42,3 +42,5 @@ document.addEventListener('alpine:init', () => {
     filteredPosts: [],
   }))
 })
+
+console.log('just a test for git!')
